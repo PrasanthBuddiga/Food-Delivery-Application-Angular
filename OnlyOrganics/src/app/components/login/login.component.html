@@ -1,0 +1,16 @@
+<div class="cont">
+    <h1>Login here</h1>
+    <form >
+        <div class="formwrap">
+            <label for="email">Email</label>
+            <input type="email" required placeholder="enter email ID" name="email" [(ngModel)]="loginUser.email">
+        </div>
+        <div class="formwrap">
+            <label for="password">Password</label>
+            <input type="password" required placeholder="enter password" name="password" [(ngModel)]="loginUser.password">
+        </div>
+        <button type="button" class="btn" (click)="login()">Login</button>
+        <div class="linktoRegister">New User? Register <a class="link" routerLink="/register">here</a></div>
+        <p *ngIf="isLoginFailed">{{errorMes}}</p>
+    </form>
+</div>

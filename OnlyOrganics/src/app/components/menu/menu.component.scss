@@ -1,0 +1,29 @@
+.container{
+    
+    margin: auto;
+}
+.banner{
+    // margin: auto;
+    height: 60vh;
+    background-color: #ffd900c3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h3{
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    span{
+        color: rgb(215, 88, 41);
+        color: black;
+    }
+}
+.cont{
+    // background-color: white;
+    min-height: calc(100vh - 8rem);
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 20px;
+    padding: 4rem 2rem;
+}

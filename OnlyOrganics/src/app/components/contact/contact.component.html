@@ -1,0 +1,18 @@
+<div class="cont">
+    <div class="hero">
+        <h1>Got something to share with us?</h1>
+    </div>
+    <form  >
+        <h2>Contact us!</h2>
+        <div class="formwrap">
+            <input type="text" placeholder="Enter your name" name="name" [(ngModel)]="NAME">
+        </div>
+        <div class="formwrap">
+            <input type="email" name="email" required placeholder="Enter your email Id" [(ngModel)]="email">
+        </div>
+        <div class="formwrap">
+            <textarea name="message" placeholder="Leave your message" cols="30" rows="10" [(ngModel)]="message"></textarea>
+        </div>
+        <button type="submit" class="btn" (click)="submitForm($event)" >Submit</button>
+    </form>
+</div>

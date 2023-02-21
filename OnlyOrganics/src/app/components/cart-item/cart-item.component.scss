@@ -1,0 +1,44 @@
+.cont{
+    margin: 10px;
+    // height: 50vh;
+    .flexDisp{
+        background-color: rgb(224, 195, 30);
+        border-radius: 5px;
+        color: black;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+        .qty{
+            label{
+                color: black;
+                font-weight: bold;
+            }
+            input{
+                background-color: black;
+                width: 50px;
+                border-radius: 5px;
+                outline: none;
+                padding: 2px;
+            }
+        }
+        .img-cont
+        {
+            max-width:70px ;
+            img{
+                max-width: 100%;
+                border: black 1px solid;
+            }
+        }
+        .dlt{
+            i{
+
+                color: black;
+                cursor: pointer;
+                &:hover{
+                    color: red;
+                }
+            }
+        }
+    }
+}

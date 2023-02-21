@@ -1,0 +1,23 @@
+<div class="cont" >
+    
+    <div class="no-items" *ngIf="cartList.length==0; else cart">
+        <h3>Looks like you have not added any items to the cart!</h3>
+        <a class="btn" routerLink="/menu">Choose from Menu</a>
+    </div>
+    <ng-template #cart>
+        <h1>Ready to check out?</h1>
+        <div class="flex-disp">
+            <div class="left-cont">
+                <app-cart-item *ngFor="let food of cartList" [food]=food></app-cart-item>
+            </div>
+            <div class="right-cont">
+                <p *ngFor="let food of cartList">{{food.qty}} X {{food.name}} = {{food.qty}} X {{food.price}}$</p>
+                <hr>
+                <hr>
+                <h3>Total Price:<span>{{totalPrice | number : '1.1-2' }} $</span></h3> 
+                <button class="btn" (click)="goToPayment()">Proceed to check out</button>
+            </div>
+        </div>
+    </ng-template>
+    
+</div>

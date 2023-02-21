@@ -1,0 +1,12 @@
+<div class="container">
+
+    <div class="banner">
+        <h3>Here you go!! Explore our wide range of burgers..</h3>
+        <p>We don't serve fastfood. We serve <span>Fresh & Healthy</span> food as fast as we can.</p>
+    </div>
+    <div class="cont">
+    
+        <app-foodcard *ngFor="let burger of burgers" [food]=burger></app-foodcard>
+    </div>
+</div>
+

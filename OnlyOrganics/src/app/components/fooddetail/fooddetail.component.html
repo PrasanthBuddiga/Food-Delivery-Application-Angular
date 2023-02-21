@@ -1,0 +1,24 @@
+<div class="cont">
+    <div class="left-cont">
+        <div class="img">
+            <img src={{currentFood[0]?.img}} alt="">
+        </div>
+    </div>
+    <div class="right-cont">
+        <div class="back">
+            <p>&#8592;</p>
+            <a [routerLink]="['/menu']">Back to Menu</a>
+        </div>
+        
+        <div class="details">
+            <h1>{{currentFood[0]?.name}}</h1>
+            <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, incidunt assumenda? Repudiandae sapiente fugiat praesentium fugit quasi, mollitia dolor aliquid?</div>
+            <h3>
+                {{currentFood[0].price}}$
+            </h3>
+            <h4>Rating:{{currentFood[0]?.rate}}</h4>
+            <button class="btn" (click)="addToCart()">Add to Cart</button>
+            <p  [hidden]="!cartMessage" style="margin-top: 10px; color: gold; text-align: center;">Item added to the Cart!</p>
+        </div>
+    </div>
+</div>

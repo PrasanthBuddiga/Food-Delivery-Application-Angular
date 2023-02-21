@@ -1,0 +1,15 @@
+<div class="cont">
+    <h2>{{food.name}}</h2>
+    <div class="flexDisp">
+        <div class="img-cont">
+            <img src={{food.img}} alt={{food.name}}>
+        </div>
+        <div class="qty">
+            <label for="quantity">Qty:</label>
+            <input min="1" type="number" value={{food.qty}}  (change)="inputChange($event)" maxlength="1" oninput="validity.valid||(value=1);" onpress="isNumber($event)" id="quantity">
+        </div>
+        <div class="dlt" (click)="deleteFromCart()">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+        </div>
+    </div>
+</div>

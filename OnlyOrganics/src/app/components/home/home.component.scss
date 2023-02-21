@@ -1,0 +1,57 @@
+@import '../../common/common.scss';
+
+.carousel_cont{
+  height: calc(100vh);
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  .img_cont{
+    width: 100vw;
+  }
+  img{
+    width: 100%;
+  }
+  .cont{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1{
+      font-size: 3rem;
+      span{
+        padding:5px 0px;
+        // font-size: 4rem;
+      }
+    }
+    a{
+      margin-top: 10px;
+      font-size: 2rem;
+      position: relative;
+      &:after{
+        content: '';
+        position: absolute;
+        display: block;
+        height: 5px;
+        background-color: $primary_color;
+        width: 10px;
+        top: 100%;
+        animation: anim 2s ease-in-out infinite;
+        // max-width: fit-content;
+      }
+    }
+  }
+}
+@keyframes anim{
+  0%{
+    width: 0px;
+  }
+  
+  100%{
+    width: 100%;
+  }
+}
